@@ -12,8 +12,9 @@ O gerenciamento de infraestrutura em nuvem também está no escopo do negócio, 
 <p>
 <h2>Requisitos:</h2>
 <p>
-O projeto se refere a um site estático de alcance global. Deverá ser desenvolvido para exibir de forma clara e profissional o nome do titular e suas principais competências e serviços. Deverá incluir uma seção dedicada à apresentação pessoal, fornecendo uma visão geral do perfil profissional e dos principais serviços. Além disso, o site deve conter uma seção detalhada sobre as habilidades e áreas de atuação, permitindo que os visitantes compreendam as capacidades e a experiência do titular. Para facilitar a comunicação, o site deve oferecer métodos de contato direto, como links para redes profissionais e canais de mensagem. O objetivo é criar uma plataforma eficaz para atrair clientes em potencial ou recrutadores, refletindo a expertise do titular e promovendo suas qualificações e serviços.
-O site será hospedado na AWS, seguindo as melhores práticas de segurança. Deverá ter uma estimativa de custo de aproximadamente $2 por dia. O site deverá adotar também uma combinação de custos competitivos, alta disponibilidade e acesso eficiente para a maioria dos usuários na América do Norte e na Europa. Após o segundo dia e a documentação dos requisitos atendidos, toda a estrutura em nuvem deverá ser finalizada, permanecendo apenas as documentações em repositórios para fins de aprendizado e exposição em portfólios.
+O projeto consiste em um site estático global para exibir o nome do titular e suas principais competências e serviços de forma clara e profissional. Incluirá uma seção de apresentação pessoal e uma detalhada sobre habilidades e áreas de atuação, permitindo que os visitantes compreendam a experiência do titular. Métodos de contato direto, como links para redes profissionais, facilitarão a comunicação e atrairão clientes em potencial e recrutadores.
+O "Portfólio de Ana Santana" será um portfólio pessoal com design limpo e responsivo, destacando o nome e especializações da desenvolvedora. As seções "Sobre mim", "Habilidades" e "Contato" organizarão informações de forma clara, utilizando um reset básico para garantir legibilidade e cores contrastantes, como cinza claro, cinza escuro e azul. A seção de habilidades listará competências técnicas, e o rodapé terá uma declaração de direitos autorais. As ferramentas permitirão interatividade básica, logando no console ao carregar a página.
+O site será hospedado na AWS, seguindo as melhores práticas de segurança, com custo estimado de $2 por dia, oferecendo alta disponibilidade e acesso eficiente na América do Norte e Europa. Após dois dias e a documentação dos requisitos, a estrutura em nuvem será finalizada, mantendo apenas as documentações em repositórios para aprendizado e portfólios.
 </p>
 
 
@@ -32,7 +33,7 @@ O site será hospedado na AWS, seguindo as melhores práticas de segurança. Dev
 <p>
 
 </p>
- <h3>Plano de Testes:</h3>
+ <h3>Plano de Testes</h3>
   <p>
 
 </p>
@@ -73,7 +74,7 @@ O site será hospedado na AWS, seguindo as melhores práticas de segurança. Dev
 
 
 </p>
- <h3>Ferramentas desenvolvimento e estrutura AWS(us-west-1):</h3>
+ <h3>Ferramentas desenvolvimento</h3>
   <p>
 
 <p >🚀 1-HTML</p>
@@ -88,33 +89,52 @@ O site será hospedado na AWS, seguindo as melhores práticas de segurança. Dev
 
 <p >🚀 4-Browser</p>
 
-<p >🚀 5-Amazon S3</p>
+<p >🚀 5-Git/GitHub</p>
 
-<p >🚀 6-Bucket Policy: Configurar permissões de acesso ao bucket</p>
+</p>
+ <h3>Arquitetura do Site na AWS(us-west-1):</h3>
+  <p>
+ <p>🚀 1-Amazon S3</p>
 
-<p >🚀 7-Static Website Hosting: Configurar o bucket para hospedar um site estático</p>
+<p>🚀 2-Bucket Policy: Configurar permissões de acesso ao bucket</p>
 
-<p >🚀 8- Versioning: Habilitar o versionamento para recuperação de dados</p>
+<p>🚀 3-Static Website Hosting: Configurar o bucket para hospedar um site estático</p>
 
-<p >🚀 9-Amazon CloudFront: Criar e configurar uma distribuição para entregar o conteúdo do S3.Configurar HTTPS para segurança na comunicação.Configurar políticas de cache e comportamento de visualização e Integrar com AWS WAF para proteção adicional.</p>
+<p>🚀 4-Versioning: Habilitar o versionamento para recuperação de dados</p>
 
-<p >🚀 10- AWS IAM: Criar e gerenciar políticas de acesso para recursos AWS. Configurar usuários e funções com permissões mínimas necessárias.Configurar users and Roles</p>
+<p>🚀 5-CORS: Configurar regras de CORS no S3 se o site acessar recursos de outros domínios.</p>
 
-<p >🚀 11-AWS WAF: Web ACL ou Criar regras para proteger o site contra ataques comuns como SQL injection e XSS.Adicionar e configurar regras específicas de segurança, atravez das roles</p>
-<p >🚀 12-AWS Shield:Shield Standard, proteção automática contra ataques DDoS comuns.</p>
+<p>🚀 6-Redirects e Error Pages: Configurar redirecionamentos e páginas de erro personalizadas no S3.</p>
 
-<p >🚀 13-AWS CloudWatch: Monitorar métricas importantes do S3 e CloudFront. Configurar alarmes para eventos críticos, como aumento de tráfego ou erros.Coletar e analisar logs para detecção de problemas.</p>
+<p>🚀 7-Amazon CloudFront: Criar e configurar uma distribuição para entregar o conteúdo do S3. Configurar HTTPS para segurança na comunicação. Configurar políticas de cache e comportamento de visualização e Integrar com AWS WAF para proteção adicional.</p>
 
-<p >🚀 14-AWS Certificate Manager(ACM): SSL/TLS certificates, Obter e gerenciar certificados para HTTPS.</p>
+<p>🚀 8-Performance Tuning: Utilizar o AWS Global Accelerator para melhorar a latência de acesso global.</p>
 
-<p >🚀 15-AWS Route 53:Domain Registration, registrar novos domínios ou gerenciar domínios existentes.DNS Configuration, configurar registros DNS para apontar para a distribuição CloudFront.</p>
+<p>🚀 9-S3 Lifecycle Policies: Configurar políticas de ciclo de vida para gerenciar o armazenamento e a exclusão automática de objetos.</p>
 
-<p >🚀16-AWS S3 Server Access Logging: Access Logs, habilitar logs para monitorar solicitações feitas ao bucket S3.</p>
+<p>🚀 10-AWS IAM: Criar e gerenciar políticas de acesso para recursos AWS. Configurar usuários e funções com permissões mínimas necessárias. Configurar users and Roles.</p>
 
-<p >🚀 17-Git/GitHub</p>
+<p>🚀 11-AWS WAF: Configurar Web ACL para proteger o site contra ataques comuns, como SQL injection e XSS. Criar regras específicas para filtrar tráfego malicioso.</p>
 
-<p >🚀 18-AWS CloudTrail: API Activity Logs, monitorar e registrar chamadas de API feitas para os serviços AWS, ajudando na auditoria e conformidade.</p>
+<p>🚀 12-AWS Shield: Utilizar o Shield Standard para proteção automática contra ataques DDoS comuns, garantindo que seu site permaneça disponível durante tentativas de ataque.</p>
 
+<p>🚀 13-AWS CloudWatch: Monitorar métricas importantes do S3 e CloudFront. Configurar alarmes para eventos críticos, como aumento de tráfego ou erros. Coletar e analisar logs para detecção de problemas.</p>
+
+<p>🚀 14-AWS Certificate Manager (ACM): SSL/TLS certificates, obter e gerenciar certificados para HTTPS.</p>
+
+<p>🚀 15-AWS Route 53: Domain Registration, registrar novos domínios ou gerenciar domínios existentes. DNS Configuration, configurar registros DNS para apontar para a distribuição CloudFront.</p>
+
+<p>🚀 16-AWS S3 Server Access Logging: Access Logs, habilitar logs para monitorar solicitações feitas ao bucket S3.</p>
+
+<p>🚀 17-Amazon Lambda: Criar funções sem servidor para executar código em resposta a eventos, como uploads no S3 ou chamadas de API. Configurar triggers e permissões para integração com outros serviços AWS, permitindo automação de processos.</p>
+
+<p>🚀 18-Amazon API Gateway: Criar, publicar e gerenciar APIs. Configurar métodos de API para integrar com a Lambda. Habilitar autenticação e controle de acesso, além de monitorar o uso e desempenho da API com CloudWatch.</p>
+
+<p>🚀 19-Git/GitHub</p>
+
+<p>🚀 20-AWS CloudTrail: API Activity Logs, monitorar e registrar chamadas de API feitas para os serviços AWS, ajudando na auditoria e conformidade.</p>
+
+<p>🚀 21-CloudFront Access Logs: Habilitar logs de acesso do CloudFront para análise detalhada.</p>
 
 <h3>Relatórios de testes(incluindo latência, segurança, funcionalidade):</h3>
  <p></p>
