@@ -136,6 +136,27 @@ O site será hospedado na AWS, seguindo as melhores práticas de segurança, com
 
 <p>🚀 21-CloudFront Access Logs: Habilitar logs de acesso do CloudFront para análise detalhada.</p>
 
+
+</p>
+ <h2>Diagramas de Arquitetura do Site na AWS</h2>
+  <p>
+
+  </p>
+ <h3>Diagrama de Arquitetura Geral:</h3>
+  <p>
+</p>
+ <h3>Diagrama de Fluxo de Dados:</h3>
+  <p>
+  </p>
+ <h3>Diagrama de Segurança:</h3>
+  <p>
+  </p>
+ <h3>Diagrama de Monitoramento:</h3>
+  <p>
+  </p>
+ <h3>Diagrama de Ciclo de Vida dos Dados:</h3>
+  <p>
+
 <h3>Relatórios de testes(incluindo latência, segurança, funcionalidade):</h3>
  <p></p>
  <p></p>
